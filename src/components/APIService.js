@@ -1,6 +1,6 @@
 export default class APIService {
   static loginUser(body) {
-    return fetch("http://127.0.0.1:8000/api/auth/", {
+    return fetch("https://albinism-detector.onrender.com/api/auth/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -12,7 +12,7 @@ export default class APIService {
   }
 
   static RegisterUser(body) {
-    return fetch("http://127.0.0.1:8000/api/users/", {
+    return fetch("https://albinism-detector.onrender.com/api/users/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
