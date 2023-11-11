@@ -23,7 +23,7 @@ const Login = () => {
       .then((resp) => setToken("mytoken", resp.token))
       .catch(
         (error) =>
-          console.log(error), setErrorMessage( "Invalid Logins")
+          console.log(error) && setErrorMessage( "Invalid Logins")
       );
   };
 
