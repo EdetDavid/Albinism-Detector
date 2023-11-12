@@ -1,4 +1,4 @@
-Uhexport default class APIService {
+export default class APIService {
   static loginUser(body) {
     return fetch("https://albinism-detector.onrender.com/api/auth/", {
       method: "POST",
