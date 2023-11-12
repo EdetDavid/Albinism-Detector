@@ -21,7 +21,7 @@ const Login = () => {
   const loginBtn = () => {
     APIService.loginUser({ username, password })
       .then((resp) => setToken("mytoken", resp.token))
-      .catch((error) => console.log(error), setErrorMessage("Invalid Logins"));
+      .catch((error) => console.log(error) && setErrorMessage("Invalid Logins"));
   };
 
   const RegisterBtn = () => {
