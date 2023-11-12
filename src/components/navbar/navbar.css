@@ -76,7 +76,7 @@
   align-items: flex-end;
   flex-direction: column;
   text-align: end;
-  background: var(--color-footer);
+  background: #0f172a;
   padding: 2rem;
   position: absolute;
   top: 40px;
@@ -136,7 +136,8 @@
 /* Animations  */
 
 .scale-up-center {
-  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 

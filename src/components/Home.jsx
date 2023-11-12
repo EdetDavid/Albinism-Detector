@@ -36,7 +36,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div id="algorithm-section" className="bg-gray-200 py-12">
+      <div id="algorithm-section" className="bg-gray-200 p-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-semibold mb-4">
             Our Advanced Genetic Algorithm
@@ -53,7 +53,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div id="contact-section" className="bg-white py-12">
+      <div id="contact-section" className="bg-white p-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-semibold mb-4">Want to Learn More?</h2>
           <p className="text-gray-700 mb-6">

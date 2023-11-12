@@ -24,7 +24,7 @@ const Form = () => {
     };
 
     axios
-      .post("https://albinism-detector.onrender.com/api/individuals", data)
+      .post("http://127.0.0.1:8000/api/individuals/", data)
       .then((response) => {
         console.log(response.data.message); // Print the success message
         setPopulationSize("");
@@ -41,7 +41,7 @@ const Form = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://albinism-detector.onrender.com/api/individuals", {
+        const response = await fetch("http://127.0.0.1:8000/api/individuals/", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -58,11 +58,11 @@ const Form = () => {
 
   return (
     <>
-      <div className="row overflow-hidden">
+      <div id="form-container" className="row overflow-hidden ">
         <div className="col-7">
           <div
             id="form-wrapper"
-            className="container mt-5 w-75 text-white bg-gray-400 rounded my-5 rounded-5  shadow"
+            className="container mt-5 w-75 text-white  bg-gray-400 rounded my-5 rounded-5  shadow"
           >
             <form onSubmit={handleSubmit} className="w-75 mx-auto">
               <div className="mb-3">

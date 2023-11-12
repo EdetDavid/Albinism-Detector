@@ -8,33 +8,57 @@ import "./navbar.css";
 // BEM -> Block Element Modifier
 
 const Navbar = () => {
+  const handleHideMobileNav = () => {
+    setToggleMenu(!toggleMenu);
+  };
+
   const Menu = () => {
     return (
       <>
         <p>
-          <NavLink to="/" className="nav-link text-white">
+          <NavLink
+            onClick={handleHideMobileNav}
+            to="/"
+            className="nav-link text-white"
+          >
             Home
           </NavLink>
         </p>
         <p>
-          <NavLink to="/about" className="nav-link text-white">
+          <NavLink
+            onClick={handleHideMobileNav}
+            to="/about"
+            className="nav-link text-white"
+          >
             About
           </NavLink>
         </p>
 
         <p>
-          <NavLink to="/case-studies" className="nav-link text-white">
+          <NavLink
+            onClick={handleHideMobileNav}
+            to="/case-studies"
+            className="nav-link text-white"
+          >
             Case Studies
           </NavLink>
         </p>
 
         <p>
-          <NavLink to="/albinism-detector" className="nav-link text-white">
+          <NavLink
+            onClick={handleHideMobileNav}
+            to="/albinism-detector"
+            className="nav-link text-white"
+          >
             AI
           </NavLink>
         </p>
         <p>
-          <NavLink to="/optimize" className="nav-link text-white">
+          <NavLink
+            onClick={handleHideMobileNav}
+            to="/optimize"
+            className="nav-link text-white"
+          >
             AI-BOT
           </NavLink>
         </p>
@@ -45,6 +69,7 @@ const Navbar = () => {
 
   const logoutBtn = () => {
     removeToken(["mytoken"]);
+    handleHideMobileNav();
   };
 
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -97,11 +122,24 @@ const Navbar = () => {
           <div className="gpt3__navbar-menu_container scale-up-center bg-dark z-50">
             <div className="gpt3__navbar-menu_container-links ">
               <Menu />
-              <NavLink to="/login" className="nav-link">
-                <button id="nav-btn-login" type="button">
-                  {"  Get Started "}
-                </button>
-              </NavLink>
+
+              {!token["mytoken"] ? (
+                <NavLink to="/login" className="nav-link">
+                  <button
+                    onClick={handleHideMobileNav}
+                    id="nav-btn-login"
+                    type="button"
+                  >
+                    {"  Get Started "}
+                  </button>
+                </NavLink>
+              ) : (
+                <NavLink to="/login" className="nav-link">
+                  <button onClick={logoutBtn} id="nav-btn-login" type="button">
+                    {"  Logout "}
+                  </button>
+                </NavLink>
+              )}
             </div>
           </div>
         )}

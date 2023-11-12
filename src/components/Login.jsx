@@ -21,10 +21,7 @@ const Login = () => {
   const loginBtn = () => {
     APIService.loginUser({ username, password })
       .then((resp) => setToken("mytoken", resp.token))
-      .catch(
-        (error) =>
-          console.log(error) && setErrorMessage( "Invalid Logins")
-      );
+      .catch((error) => console.log(error), setErrorMessage("Invalid Logins"));
   };
 
   const RegisterBtn = () => {
@@ -41,7 +38,7 @@ const Login = () => {
   return (
     <div className="container">
       <div
-        id="form-wrapper"
+        id="login-form"
         className=" flex flex-col justify-center items-center bg-gray-400 w-50 mx-auto rounded-5 shadow "
       >
         <br />
@@ -168,7 +165,7 @@ const Login = () => {
             </>
           ) : (
             <>
-              <h5>
+              <h6>
                 {" Have Account? Please:"}
 
                 <button
@@ -177,7 +174,7 @@ const Login = () => {
                 >
                   {"Login "}
                 </button>
-              </h5>
+              </h6>
             </>
           )}
         </div>

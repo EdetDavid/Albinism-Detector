@@ -4,7 +4,7 @@ const Casestudies = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <header className=" p-4 text-white">
-        <h1 className="text-black text-2xl text-center font-bold ms-5 ps-5 text-decoration-underline mt-5 mb-0 text-capitalize">
+        <h1 className="text-black text-2xl  text-lg-center text-sm-start font-bold   mt-5 mb-0 text-capitalize">
           Albinism Prediction For A given Population using Genetic Algorithm
         </h1>
       </header>

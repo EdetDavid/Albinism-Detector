@@ -10,10 +10,17 @@ body {
   border-left: 3px solid white !important;
   position: relative;
 }
+
+#login-form {
+  width: 500px !important;
+  border-top: 5px solid white;
+  border-left: 3px solid white;
+  position: relative;
+  display: flex;
+}
 #submit-btn {
-  position: absolute;
-  left: calc(50% - 225px);
-  bottom: 53px;
+  align-self: flex-start;
+  margin-left: 60px;
 }
 
 #output {
@@ -31,22 +38,72 @@ body {
   transform: translate(-50%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1200px) {
+  #form-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+  }
+
   #form-wrapper {
-    width: 400px !important;
+    width: 600px !important;
     font-size: normal;
+    top: 0;
+    position: absolute;
   }
 }
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 1000px) {
+  #form-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+
+  #form-wrapper {
+    width: 450px !important;
+    font-size: normal;
+    position: absolute;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+
+  #form-wrapper {
+    width: 600px !important;
+    font-size: normal;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  #output {
+    margin-top: 650px;
+    width: 100%;
+    flex-direction: row;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
   #text-heading {
     font-size: 24px;
   }
 
-  #form-wrapper {
-    width: 300px !important;
-    font-size: 13px;
-    margin-left: 10px;
-  }
   input::placeholder {
     font-size: 13px;
   }
@@ -55,7 +112,67 @@ body {
     font-size: 15x;
   }
   #form-wrapper button {
-    padding: 7px 9px !important;
-    font-size: 13px !important;
+    padding: 9px 12px !important;
+    font-size: 16px !important;
+  }
+
+  #form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+
+  #form-wrapper {
+    width: 400px !important;
+    font-size: normal;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  #output {
+    margin-top: 650px;
+    width: 100%;
+    flex-direction: row;
+    margin-left: 20px;
+  }
+
+  #login-form {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #form-wrapper {
+    width: 85% !important;
+    font-size: normal;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  #output {
+    margin-top: 650px;
+    width: 100%;
+    flex-direction: row;
+    margin-left: 50px;
+  }
+
+  #login-form {
+    width: 350px !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #login-form h6 {
+    margin-left: 20px;
+  }
+  #submit-btn {
+    align-self: flex-start;
+    margin-left: 45px;
+    margin-top: -10px !important;
   }
 }

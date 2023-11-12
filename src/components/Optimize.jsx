@@ -16,7 +16,7 @@ const Optimize = () => {
 
   const handleOptimize = (formData) => {
     axios
-      .post("https://albinism-detector.onrender.com/api/optimize/", formData, {
+      .post("http://localhost:8000/api/optimize/", formData, {
         headers: {
           "Content-Type": "application/json",
         },
