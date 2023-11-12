@@ -12,7 +12,7 @@ Uhexport default class APIService {
   }
 
   static RegisterUser(body) {
-    return fetch("htts://albinism-detector.onrender.com/api/users/", {
+    return fetch("https://albinism-detector.onrender.com/api/users/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
